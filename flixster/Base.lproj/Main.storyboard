@@ -45,7 +45,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" translatesAutoresizingMaskIntoConstraints="NO" id="jpF-x0-DBC" customClass="MovieGridCell" customModule="flixster">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="MovieGridCell" translatesAutoresizingMaskIntoConstraints="NO" id="jpF-x0-DBC" customClass="MovieGridCell" customModule="flixster">
                                         <rect key="frame" x="0.0" y="0.0" width="201" height="245"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DD0-VK-IBn">
@@ -98,27 +98,48 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yav-4d-PYG">
-                                                    <rect key="frame" x="155" y="9" width="229" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yav-4d-PYG">
+                                                    <rect key="frame" x="155" y="9" width="66.666666666666686" height="32"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kV-go-kCW">
-                                                    <rect key="frame" x="155" y="38" width="229" height="123"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kV-go-kCW">
+                                                    <rect key="frame" x="155" y="50" width="251" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="251" id="Evk-M7-TnV"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iS7-Ab-9EP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iS7-Ab-9EP">
                                                     <rect key="frame" x="20" y="6" width="127" height="161"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="127" id="GTk-Ci-1tY"/>
+                                                        <constraint firstAttribute="height" constant="161" id="zgJ-dc-ql4"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iS7-Ab-9EP" secondAttribute="bottom" constant="5" id="5Qn-ib-bRJ"/>
+                                                <constraint firstItem="9kV-go-kCW" firstAttribute="leading" secondItem="Yav-4d-PYG" secondAttribute="leading" id="EHG-Jy-oNo"/>
+                                                <constraint firstItem="Yav-4d-PYG" firstAttribute="top" secondItem="Cbt-f9-IPv" secondAttribute="top" constant="9" id="F2P-p0-jtR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9kV-go-kCW" secondAttribute="trailing" constant="-12" id="SNo-YU-FMy"/>
+                                                <constraint firstItem="9kV-go-kCW" firstAttribute="leading" secondItem="iS7-Ab-9EP" secondAttribute="trailing" constant="8" id="a6r-Uu-2pK"/>
+                                                <constraint firstItem="iS7-Ab-9EP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cbt-f9-IPv" secondAttribute="leading" id="cff-9c-XeO"/>
+                                                <constraint firstItem="9kV-go-kCW" firstAttribute="top" secondItem="Yav-4d-PYG" secondAttribute="bottom" constant="9" id="eOA-Xs-Dsr"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yav-4d-PYG" secondAttribute="bottom" constant="131" id="hHa-vX-zek"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yav-4d-PYG" secondAttribute="bottom" constant="131" id="jTi-fg-R0E"/>
+                                                <constraint firstItem="iS7-Ab-9EP" firstAttribute="top" secondItem="Cbt-f9-IPv" secondAttribute="top" constant="6" id="kLg-NR-iFO"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yav-4d-PYG" secondAttribute="trailing" id="lRO-bJ-gJb"/>
+                                                <constraint firstItem="Yav-4d-PYG" firstAttribute="leading" secondItem="iS7-Ab-9EP" secondAttribute="trailing" constant="8" id="mET-WW-Xh7"/>
+                                                <constraint firstAttribute="trailing" secondItem="9kV-go-kCW" secondAttribute="trailing" constant="8" id="neI-e8-o6T"/>
+                                                <constraint firstItem="Yav-4d-PYG" firstAttribute="leading" secondItem="iS7-Ab-9EP" secondAttribute="trailing" constant="8" id="qkf-8E-mBs"/>
+                                                <constraint firstItem="Yav-4d-PYG" firstAttribute="top" secondItem="Cbt-f9-IPv" secondAttribute="top" constant="9" id="zmV-50-4Wk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="iS7-Ab-9EP" id="Rib-Iv-OMd"/>
